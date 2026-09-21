@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amsterdam Data Union</title>
-<meta name="description" content="Amsterdam Data Union is a curated network of experienced data professionals in the Netherlands. Real data problems, honest answers, vendor neutral. Panel discussions and networking drinks.">
+<meta name="description" content="Amsterdam Data Union is a trusted network of data professionals in the Netherlands. Panel discussions and networking drinks.">
 <style>
   :root {
     --pink: #D81B60; --pink-deep: #AD1549; --pink-soft: #F9E8EF;
@@ -52,13 +52,9 @@
 
   /* About */
   .about .lead { font-size: clamp(18px, 0.8vw + 13px, 20px); line-height: 1.5; font-weight: 500; color: var(--ink); max-width: 760px; margin-bottom: 28px; }
-  .about .who { border-left: 3px solid var(--pink); padding: 2px 0 2px 18px; max-width: 760px; margin-bottom: 28px; }
-  .about .who h3, .gets b { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--pink); }
-  .about .who h3 { margin-bottom: 6px; }
-  .about .who p { font-size: clamp(16px, 1vw + 12px, 17px); color: var(--body); line-height: 1.65; }
-  .gets { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .gets li { background: var(--card); border-radius: 14px; padding: 18px 20px; }
-  .gets b { display: block; margin-bottom: 6px; }
+  .gets { list-style: none; display: grid; grid-template-columns: 1fr; gap: 16px; }
+  .gets li { background: #fff; border: 1px solid var(--border); border-left: 3px solid var(--pink); border-radius: 14px; padding: 18px 20px; }
+  .gets b { display: block; margin-bottom: 6px; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--pink); }
   .gets span { display: block; font-size: 16px; line-height: 1.5; color: var(--body); }
 
   /* How */
@@ -79,14 +75,6 @@
   .logo img { width: 44px; height: 44px; object-fit: contain; }
   .logo.wide img { width: 104px; }
   .logo span { font-size: 12px; font-weight: 600; color: #6B6B6B; text-align: center; line-height: 1.2; overflow-wrap: normal; hyphens: manual; max-width: 100%; }
-
-  /* Milestones */
-  .timeline { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; list-style: none; }
-  .timeline::before { content: ""; position: absolute; left: 10px; right: 0; top: 9px; height: 2px; background: #E6D6DC; }
-  .timeline li { position: relative; padding-right: 16px; }
-  .timeline li::before { content: ""; display: block; width: 20px; height: 20px; border-radius: 50%; background: var(--pink); border: 4px solid #fff; box-shadow: 0 0 0 2px var(--pink); margin-bottom: 18px; }
-  .timeline .date { display: block; font-size: 16px; font-weight: 600; color: var(--pink); margin-bottom: 6px; }
-  .timeline .what { font-size: clamp(17px, 1.8vw, 20px); font-weight: 700; line-height: 1.3; }
 
   /* Events */
   .events-head { margin-bottom: 32px; }
@@ -186,8 +174,6 @@
   @media (max-width: 900px) {
     .stats { grid-template-columns: repeat(2, 1fr); }
     .events { grid-template-columns: repeat(2, 1fr); }
-    .timeline { grid-template-columns: repeat(2, 1fr); row-gap: 32px; }
-    .timeline::before { display: none; }
     .contact .wrap { grid-template-columns: 1fr; gap: 32px; }
   }
   /* Phone */
@@ -206,11 +192,6 @@
       .ways, .events { grid-template-columns: 1fr; }
     .way { padding: 18px 20px; }
     .logo { width: calc((100% - 28px) / 3); }
-    .timeline { grid-template-columns: 1fr; row-gap: 20px; padding-left: 40px; }
-    .timeline::before { display: block; left: 9px; right: auto; top: 6px; bottom: 6px; width: 2px; height: auto; }
-    .timeline li { padding-right: 0; }
-    .timeline li::before { position: absolute; left: -40px; top: 1px; margin: 0; }
-    .timeline .date { margin-bottom: 2px; }
     .photos { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; gap: 10px; }
     .photos img { grid-column: auto !important; grid-row: auto !important; border-radius: 12px; }
     .photos .ph1, .photos .ph6, .photos .ph7 { grid-column: 1 / span 2 !important; grid-row: span 2 !important; }
@@ -230,7 +211,7 @@
   <section class="hero">
     <div class="wrap">
       <h1><span class="mark lg" aria-hidden="true"><i></i><i></i></span><span>Amsterdam <span class="nw">Data Union</span></span></h1>
-      <p class="tagline">Real data problems. Honest answers. Vendor neutral.</p>
+      <p class="tagline">A trusted network of data professionals.</p>
       <a class="follow" href="https://www.linkedin.com/company/amsterdam-data-union/" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21H17.6v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z"/></svg>
         Follow on LinkedIn
@@ -252,16 +233,12 @@
   <div class="panel" id="panel-about" role="tabpanel" aria-labelledby="tab-about" tabindex="-1">
   <section class="about">
     <div class="wrap">
-      <h2>A trusted network, not another <em>meetup</em>.</h2>
-      <p class="lead">Most data events show polished success stories. We compare how different companies solve the same problem, and what did not work. Just practitioners talking openly.</p>
-      <div class="who">
-        <h3>Who's in the room</h3>
-        <p>A small, curated group of experienced data people from data engineering, analytics, data science, AI and ML, and data product management. Many lead data teams. Everyone shares, everyone learns.</p>
-      </div>
+      <h2>Not another <em>meetup</em>.</h2>
+      <p class="lead">Most data events show polished success stories. We do the opposite.</p>
       <ul class="gets">
-        <li><b>Learn</b><span>How other companies handle real data challenges.</span></li>
-        <li><b>Connect</b><span>Trusted relationships across companies.</span></li>
-        <li><b>Grow</b><span>Career opportunities, talent and introductions.</span></li>
+        <li><b>Discuss, not showcase</b><span>No polished success stories. Speakers from companies of different sizes and industries sit at the same table and compare how they actually solved the same problem — including what didn't work. The conversation is the point, not the stage.</span></li>
+        <li><b>No commercial agenda</b><span>We're not a place to sell. No product pitches, no sponsors steering the conversation. Just practitioners being honest with each other about what works, what's hard, and where things break.</span></li>
+        <li><b>Small by design</b><span>We keep events intentionally small. A curated group of medior and senior practitioners means there's room for everyone to speak, ask and push back — not sit at the back of a room listening to a lecture.</span></li>
       </ul>
     </div>
   </section>
@@ -374,17 +351,6 @@
         <li class="logo"><img src="images/logos/deel.png" alt="Deel logo" loading="lazy"><span>Deel</span></li>
         <li class="logo"><img src="images/logos/nao-labs.png" alt="nao Labs logo" loading="lazy"><span>nao Labs</span></li>
       </ul>
-    </div>
-  </section>
-  <section class="alt">
-    <div class="wrap">
-      <h2>Milestones so <em>far</em>.</h2>
-      <ol class="timeline">
-        <li><span class="date">Jan 2025</span><span class="what">First panel discussion</span></li>
-        <li><span class="date">Dec 2025</span><span class="what">First networking drink</span></li>
-        <li><span class="date">Mar 2026</span><span class="what">First speaker travelling from abroad</span></li>
-        <li><span class="date">Oct 2026</span><span class="what">10 events organized</span></li>
-      </ol>
     </div>
   </section>
   </div>
